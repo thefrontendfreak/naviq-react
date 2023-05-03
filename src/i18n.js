@@ -1,0 +1,127 @@
+import i18n from 'i18next'
+import Backend from 'i18next-http-backend'
+import LanguageDetector from 'i18next-browser-languagedetector'
+import { initReactI18next } from 'react-i18next'
+
+i18n.use(LanguageDetector).use(initReactI18next).init({
+  fallbackLng: 'en',
+  debug: true,
+  detection: {
+    order: ['queryString', 'cookie'],
+    cache: ['cookie']
+  },
+  interpolation: {
+    escapeValue: false
+  },
+  resources: {
+    en: {
+      translation: {
+        "title-meta": "Naviq",
+        "title": "Decentralized programmable network layer for Web3",
+        "feature-1-title": "DPN",
+        "feature-1-content": "Naviq users can benefit from a next generation, opt-in privacy preserving mixnet layer based on the Amnesia packet mangling protocol. Node operators can setup or upgrade Warp nodes to Myst nodes in order to enable private communications",
+        "feature-2-title": "Next-gen Networking Security",
+        "feature-2-content": "Threats such as DDoS attacks are ubiquitous in Web2. Naviq proposes a blockchain based DNS solution and supports a custom routing protocol for dApps & DeFi apps that prevent a wide range of network based attacks. Ship Nodes also provide a new way of deploying apps and an additional firewall, configurable for exclusive Naviq usage that burns any foreign traffic",
+        "feature-3-title": "Decentralized Hosting Infrastructure",
+        "feature-3-content": "Compared to other system defending techniques, the Ship Nodes concept implements a customized Docker container that is specifically engineered to enable traffic routing only through the Naviq network",
+        "section-2-meta": "Developer focused",
+        "section-2-title": "BUIDL on Naviq",
+        "section-3-content": "Kickstart your next dApp or DeFi project and integrate it with Naviq for built-in networking security and enhanced performance. Naviq provides clean APIs and also feature-rich SDKs for developers to provide seamless integration of their dApps & DeFi projects in a few lines of code",
+        "section-4-title": "Naviq uses proof-of-relay",
+        "section-4-clients-title": "Clients",
+        "section-4-clients-content": "Clients interact with the Naviq network by requesting blockchain identities from Warp Nodes, open wormholes to different geographical locations around the globe and conceal their network traces through the Myst mixnet",
+        "section-4-nodes-title": "Node Operators",
+        "section-4-nodes-content": "Naviq network features 4 types of nodes: Warp, Myst, Ship and Guardian Nodes. All nodes are by default Warp Nodes that can be upgraded to more specific use-cases depending on the necessities of Naviq clients. Network operators have the possibility to earn tokens by managing a Warp Node and can upgrade it to a Myst, Ship or Guardian Node in order to maximize their rewards",
+        "section-5-title": "Open a wormhole on the map",
+        "section-6-1-title": "SRv6 Relay Nodes",
+        "section-6-1-content": "Segment routing will pave the way to a faster and more accessible Internet. Warp Nodes can act as SRv6 relay nodes in order to increase network throughput & latency",
+        "section-6-2-title": "Wormhole Access",
+        "section-6-2-content": "Naviq clients can choose the Guardian Nodes or exit nodes in order to unblock websites or geo-restricted web content",
+        "section-6-3-title": "Amnesia Protocol",
+        "section-6-3-content": "The Myst mixnet implements the Amnesia packet mangling protocol to provide full anonymity and privacy",
+        "section-6-4-title": "Docker Ships",
+        "section-6-4-content": "A customized, performant solution where Web3 content is efficiently hosted. The Ships coordinates can be obfuscated within the Naviq network or open to the Internet depending on the use-case the hosted app",
+        "section-7-title": "Distributed Hash Table",
+        "section-7-content": "The Naviq platform harnesses the power of several privacy and network security technologies, integrating them into a homogeneous system of cooperating networked layer of nodes",
+        "section-8-title": "Network Node Types",
+        "section-8-1-title": "Ship Node",
+        "section-8-1-content": "A Ship Node can host both legacy web and Web3 applications in a decentralized manner",
+        "section-8-2-title": "Myst Node",
+        "section-8-2-content": "The Naviq mixnet encrypts and mixes Amnesia packets so that it cannot be determined who is communicating with whom. It is based on a custom variant of the Loopix design",
+        "section-8-3-title": "Warp Node",
+        "section-8-3-content": "Warp Nodes form the backbone of the network and can interact with the Myst mixnet, serve content hosted by Ship Nodes or communicate with Guardian Nodes",
+        "section-8-4-title": "Guardian Node",
+        "section-8-4-content": "Naviq exit node provide network access control and manage opened client wormholes",
+        "section-9-meta": "Tokenomics",
+        "section-9-title": "Token Distribution",
+        "section-9-1-title": "Team allocation",
+        "section-9-1-content": "Development, marketing & business strategy",
+        "section-9-2-title": "Private Sale",
+        "section-9-2-content": "Strategic investment & long term project sustainability",
+        "section-9-3-title": "Public Sale",
+        "section-9-3-content": "Community participation & ecosystem growth",
+        "section-10-title": "",
+        "section-10-content": "",
+        "section-11-meta": "Vision",
+        "section-11-title": "Naviq Roadmap",
+        "section-11-1-title": "Q4 2020",
+        "section-11-1-content": "Initial development stages of the core tech",
+        "section-11-2-title": "Q1 2021",
+        "section-11-2-content": "Amnesia protocol R&D",
+        "section-11-3-title": "Q2 2021",
+        "section-11-3-content": "Middleware & smart contracts R&D",
+        "section-11-4-title": "Q3 2021",
+        "section-11-4-content": "Myst Nodes rollout & Amnesia protocol integration",
+        "section-11-5-title": "Q4 2021",
+        "section-11-5-content": "Ship Nodes rollout & optimizations",
+        "section-11-6-title": "Q1 2022",
+        "section-11-6-content": "Cross-chain integrations",
+        "section-12-meta": "",
+        "section-12-title": "",
+        "section-13-title": "Amnesia Packet",
+        "section-13-content": "The Amnesia cryptographic packet format follows the compact and provably secure design of the Sphinx packet with some modifications. It supports a full set of security features: indistinguishable replies, hiding the path length and relay position, detection of tagging attacks and replay attacks, as well as providing unlinkability for each leg of the packet’s journey over the network",
+        "section-14-title": "Open DHT",
+        "section-14-content": "A lightweight and scalable, designed for large networks, Open DHT provides an easy to use distributed in-memory data store. Every node in the network can read and write values to the store. Values are distributed over the network, with redundancy",
+        "section-15-title": "Team & advisors",
+        "section-15-content": "A goal driven team with technical, marketing and financial talent",
+        "section-16-title": "Press & News",
+        "section-17-title": "Strategic Investors",
+        "section-18-meta": "Explore",
+        "section-18-title": "Join the Community",
+        "section-18-telegram": "Engage with us on Telegram",
+        "section-18-discord": "Join our channel on Discord",
+        "section-18-twitter": "Follow us on Twitter",
+        "section-18-reddit": "Discuss on Reddit",
+        "section-18-github": "Contribute on Github",
+        "section-19-title": "Subscribe to our newsletter",
+        "footer-section-1-title": "Tech",
+        "footer-section-2-title": "Explore",
+        "footer-section-3-title": "Development",
+        "contact-title": "Contact & Inquiries",
+        "contact-content": "Send us an email or use the contact form below and we will get back to you as soon as we can",
+        "faq-title": "Frequently Asked Questions",
+        "faq-1-question": "Lorem Ipsum",
+        "faq-1-answer": "Lorem Ipsum",
+        "faq-2-question": "Lorem Ipsum",
+        "faq-2-answer": "Lorem Ipsum",
+        "faq-3-question": "Lorem Ipsum",
+        "faq-3-answer": "Lorem Ipsum",
+        "faq-4-question": "Lorem Ipsum",
+        "faq-4-answer": "Lorem Ipsum",
+        "faq-5-question": "Lorem Ipsum",
+        "faq-5-answer": "Lorem Ipsum",
+        "faq-6-question": "Lorem Ipsum",
+        "faq-6-answer": "Lorem Ipsum",
+        "faq-7-question": "Lorem Ipsum",
+        "faq-7-answer": "Lorem Ipsum"
+      }
+    },
+    de: {
+      translation: {
+        "title": "Dezentrale programmierbare Netzwerkschicht für das Web3"
+      }
+    }
+  }
+})
+
+export default i18n

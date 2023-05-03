@@ -1,0 +1,100 @@
+.faq{
+  position: relative;
+  padding-bottom: 150px;
+  margin-bottom: 150px;
+  @media screen and (max-width:768px) {
+   padding-bottom: 80px;
+  }
+  &__bottomLine{
+    position: absolute;
+    right: 0;
+    bottom: -100px;
+    width: 700px;
+    img{
+      width: 100%;
+    }
+  }
+  &__accordion{
+    position: relative;
+    z-index: 1;
+    max-width: 1080px;
+    margin: 0 auto;
+    .ant-collapse{
+      background: transparent;
+      border: 0;
+      padding: 0;
+    }
+    .ant-collapse-content{
+      background: transparent;
+      border: 0;
+      // padding: 16px 0;
+    }
+    .ant-collapse-content-box{
+      padding: 0;
+      padding-bottom: 30px;
+    }
+    .ant-collapse-item{
+      position: relative;
+      &::after{
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: auto;
+        left: 0;
+        bottom: 0;
+        background: url('../../../assets/images/acc-borber.svg');
+        height: 16px;
+      }
+    }
+    .ant-collapse > .ant-collapse-item > .ant-collapse-header .ant-collapse-arrow{
+      display: none;
+    }
+    .ant-collapse > .ant-collapse-item{
+      border-bottom: 0;
+    }
+    .ant-collapse > .ant-collapse-item > .ant-collapse-header{
+      font-weight: bold;
+      font-size: 28px;
+      line-height: 35px;
+      color: #E5E5EB;
+      padding: 30px 0;
+      position: relative;
+      &::after{
+        position: absolute;
+        content: "";
+        right: 30px;
+        top: 50%;
+        width: 47px;
+        height: 47px;
+        background: url('../../../assets/images/acc-plus.svg');
+        background-size: cover;
+        background-position: center;
+        transform-origin: center;
+        transform: translateY(-50%);
+        transition: all .3s;
+        @media screen and (max-width:768px) {
+          width: 30px;
+          height: 30px;
+        }
+        @media screen and (max-width:575px) {
+         right: 0;
+        }
+      }
+      @media screen and (max-width:768px) {
+        font-size: 20px;
+        line-height: 26px;
+      } 
+      @media screen and (max-width:575px) {
+        font-size: 14px;
+        line-height: 20px;
+      } 
+    }
+    .ant-collapse-item-active{
+      .ant-collapse-header{
+        &::after{
+          transform: translateY(-50%) rotate(45deg) !important;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,136 @@
+.contact{
+  position: relative;
+  padding-bottom: 150px;
+  margin-bottom: 150px;
+  &__formWrapper{
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  @media screen and (max-width:575px) {
+    margin-bottom: 80px;
+    padding-bottom: 80px;
+  }
+  &__bottomLine{
+    position: absolute;
+    bottom: -30px;
+    right: 0;
+    width: 600px;
+    img{
+      width: 100%;
+    }
+  }
+  &__formWrapper{
+    @media screen and (max-width:995px) {
+      flex-wrap: wrap;
+    }
+  }
+  &__form{
+    position: relative;
+    z-index: 1;
+    max-width: 582px;
+    width: 100%;
+    input, textarea , select{
+      width: 100%;
+      margin-bottom: 17px;
+      padding: 15px 20px;
+      background: #1E1E28;
+      border-radius: 10px;
+      border: 0;
+      outline: 0;
+      color: #6F6F85;
+      resize: none;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 22px;
+      -webkit-appearance: none;
+      &::placeholder{
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        color: #6F6F85;
+        @media screen and (max-width:575px) {
+          font-size: 14px;
+          line-height: 22px;
+        }
+      }
+      @media screen and (max-width:575px) {
+        padding: 15px 20px;
+        border-radius: 8px;
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+    @media screen and (max-width:995px) {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+  select{
+    cursor: pointer;
+  }
+  &__formFeild{
+    position: relative;
+    .icon{
+      position: absolute;
+      right: 35px;
+      top: 20px;
+      pointer-events: none;
+      svg{
+        width: 18px;
+      }
+      @media screen and (max-width:575px) {
+        top: 18px;
+        right: 20px;
+        svg{
+          width: 16px;
+        }
+      }
+    }
+  }
+  &__singleInfo{
+    @media screen and (max-width:995px) {
+      &:first-child{
+        margin-top: 50px;
+      }
+    }
+    &:last-child{
+      margin-top: 50px;
+      @media screen and (max-width:575px) {
+        margin-top: 30px;
+      }
+    }
+    h2{
+      font-weight: bold;
+      font-size: 26px;
+      line-height: 28px;
+      color: #E5E5EB;
+      @media screen and (max-width:575px) {
+        font-size: 20px;
+        line-height: 26px;
+      }
+    }
+    p{
+      font-weight: bold;
+      font-size: 22px;
+      line-height: 25px;
+      color: #6B6B81;
+      @media screen and (max-width:575px) {
+        font-size: 16px;
+        line-height: 20px;
+        margin-top: 5px;
+      }
+    }
+  }
+  .btn__primary.notActive{
+    border-image: unset !important;
+    border-color: #313141;
+    color: #313141 !important;
+    background-image: unset;
+    background: transparent;
+    cursor: not-allowed;
+    &::before{
+      display: none;
+    }
+  }
+}
